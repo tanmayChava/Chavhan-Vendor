@@ -95,7 +95,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, navigate 
             <div className="col-span-1 md:col-span-2 space-y-4">
               <div className="flex items-center text-white">
                 <Scale className="h-6 w-6 mr-2 text-indigo-400" />
-                <span className="text-xl font-bold">CHAVHAN STAMP VENDOR</span>
+                <span className="text-xl font-bold">{APP_NAME}</span>
               </div>
               <p className="text-slate-400 leading-relaxed max-w-sm">
                 Authorized Govt. Stamp Vendor and Legal Consultant. Serving Bhusawal and surrounding areas.
@@ -120,21 +120,21 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, navigate 
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start">
                   <MapPin className="h-5 w-5 mr-2 text-indigo-400 flex-shrink-0" />
-                  <span>Kulkarni Plot, VAKIL GALLI, Bhusawal</span>
+                  <a href="https://www.google.com/maps/search/?api=1&query=CHAVHAN+STAMP+VENDOR+Bhusawal" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kulkarni Plot, VAKIL GALLI, Bhusawal</a>
                 </li>
                 <li className="flex items-center">
                   <Phone className="h-4 w-4 mr-2 text-indigo-400" />
-                  <span>9422280256</span>
+                  <a href="tel:+919422280256" className="hover:text-white transition-colors">9422280256</a>
                 </li>
                 <li className="flex items-center">
                    <Mail className="h-4 w-4 mr-2 text-indigo-400" />
-                   <span>chavhanstamp@gmail.com</span>
+                   <a href="mailto:chavhanstamp@gmail.com" className="hover:text-white transition-colors">chavhanstamp@gmail.com</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="mt-12 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-            <div>&copy; {new Date().getFullYear()} CHAVHAN STAMP VENDOR. All rights reserved.</div>
+            <div>&copy; {new Date().getFullYear()} {APP_NAME}. All rights reserved.</div>
             <div className="mt-4 md:mt-0 space-x-6">
                 <a href="#" className="hover:text-white transition-colors">Privacy</a>
                 <a href="#" className="hover:text-white transition-colors">Terms</a>

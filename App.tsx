@@ -4,7 +4,7 @@ import { DOCUMENT_TEMPLATES, DOC_ICONS } from './constants';
 import { DocumentType, GeneratedDocument } from './types';
 import { DocumentGenerator } from './components/DocumentGenerator';
 import { HashRouter, Routes, Route, useNavigate, useLocation, useParams } from 'react-router-dom';
-import { ArrowRight, ArrowLeft, Star, Check, Search, FileText, Download, ArrowUpRight, MapPin, Phone, Mail, Clock, Award, Users, Shield, Zap, MessageCircle, FileCheck, PenTool } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check, Search, FileText, ArrowUpRight, MapPin, Phone, Mail, Clock, Award, Users, MessageCircle } from 'lucide-react';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -387,42 +387,53 @@ const HomePage = ({ onInfoClick }: { onInfoClick: (type: DocumentType) => void }
             <div className="bg-white p-10 rounded-3xl shadow-lg border border-slate-100 flex flex-col justify-center">
                 <h3 className="text-2xl font-bold text-slate-900 mb-8">Contact Information</h3>
                 
-                <div className="space-y-8">
-                    <div className="flex items-start">
-                        <div className="bg-indigo-100 p-3 rounded-full mr-4 text-indigo-600">
+                <div className="space-y-6">
+                    <a 
+                        href="https://www.google.com/maps/search/?api=1&query=CHAVHAN+STAMP+VENDOR+Bhusawal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start group cursor-pointer transition-all hover:bg-slate-50 p-4 -mx-4 rounded-2xl"
+                    >
+                        <div className="bg-indigo-100 p-3 rounded-full mr-4 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                             <MapPin className="w-6 h-6" />
                         </div>
                         <div>
-                            <h4 className="font-bold text-slate-900">Our Address</h4>
-                            <p className="text-slate-600 mt-1">
+                            <h4 className="font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Our Address</h4>
+                            <p className="text-slate-600 mt-1 group-hover:text-slate-800 transition-colors">
                                 Kulkarni Plot, VAKIL GALLI,<br/>
                                 behind CIVIL COURT, New Satara,<br/>
                                 Juna Satara, Bhusawal, Maharashtra 425201
                             </p>
                         </div>
-                    </div>
+                    </a>
 
-                    <div className="flex items-start">
-                         <div className="bg-indigo-100 p-3 rounded-full mr-4 text-indigo-600">
+                    <div className="flex items-start group hover:bg-slate-50 p-4 -mx-4 rounded-2xl transition-all">
+                         <div className="bg-indigo-100 p-3 rounded-full mr-4 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                             <Phone className="w-6 h-6" />
                         </div>
                         <div>
-                            <h4 className="font-bold text-slate-900">Phone & WhatsApp</h4>
-                            <p className="text-slate-600 mt-1">9422280256 / 9422445252</p>
+                            <h4 className="font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Phone & WhatsApp</h4>
+                            <div className="flex flex-col mt-1 gap-1">
+                                <a href="tel:+919422280256" className="text-slate-600 hover:text-indigo-600 font-medium transition-colors w-fit">9422280256</a>
+                                <a href="tel:+919422445252" className="text-slate-600 hover:text-indigo-600 font-medium transition-colors w-fit">9422445252</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="flex items-start">
-                         <div className="bg-indigo-100 p-3 rounded-full mr-4 text-indigo-600">
+                    <a 
+                        href="mailto:chavhanstamp@gmail.com"
+                        className="flex items-start group cursor-pointer transition-all hover:bg-slate-50 p-4 -mx-4 rounded-2xl"
+                    >
+                         <div className="bg-indigo-100 p-3 rounded-full mr-4 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                             <Mail className="w-6 h-6" />
                         </div>
                         <div>
-                            <h4 className="font-bold text-slate-900">Email</h4>
-                            <p className="text-slate-600 mt-1">chavhanstamp@gmail.com</p>
+                            <h4 className="font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Email</h4>
+                            <p className="text-slate-600 mt-1 group-hover:text-slate-800 transition-colors">chavhanstamp@gmail.com</p>
                         </div>
-                    </div>
+                    </a>
 
-                    <div className="flex items-start">
+                    <div className="flex items-start group p-4 -mx-4">
                          <div className="bg-indigo-100 p-3 rounded-full mr-4 text-indigo-600">
                             <Clock className="w-6 h-6" />
                         </div>

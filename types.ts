@@ -44,14 +44,3 @@ export interface GeneratedDocument {
   createdAt: string;
   status: 'Draft' | 'Paid' | 'Completed';
 }
-
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-}
-
-export interface ChatMessage {
-  role: 'user' | 'model';
-  text: string;
-}
